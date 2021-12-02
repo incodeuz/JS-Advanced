@@ -1,19 +1,24 @@
 document.querySelector(".buton").addEventListener("click", getLog);
 function getLog() {
-    let inputOne = document.querySelector(".inputbir").value;
-    let inputTwo = document.querySelector(".inputikki").value;
-    let inputThree = document.querySelector(".inputuch").value;
-    if (inputOne == "rectangle") {
-        for (let i = 1; i < +inputTwo; i++) {
-      let output = "";
-      for (let j = 1; j <= +inputTwo - i; j++) {
-        output += "";
+  let inputOne = document.querySelector(".inputbir").value;
+  let inputTwo = document.querySelector(".inputikki").value;
+  let inputThree = document.querySelector(".inputuch").value;
+  if (inputOne === "triangle") {
+    let n = 15;
+    let string = "";
+    // External loop
+    for (let i = 1; i <=n; i++) {
+      // printing spaces
+      for (let j = 1; j <= n - i; j++) {
+        string += " ";
       }
-      for (let k = 1; k <= i; k++) {
-        output += inputThree;
+      // printing star
+      for (let k = 0; k < 2 * i - 1; k++) {
+        string += inputThree;
       }
-      console.log(output);
+      string += "\n";
     }
+    console.log(string);
   }
   for (let b = 1; b <= +inputTwo; ++b) {
     let pyramid = inputThree.repeat(b);
