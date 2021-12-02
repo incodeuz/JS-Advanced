@@ -4,15 +4,11 @@ function getLog() {
   let inputTwo = document.querySelector(".inputikki").value;
   let inputThree = document.querySelector(".inputuch").value;
   if (inputOne === "triangle") {
-    let n = 15;
     let string = "";
-    // External loop
-    for (let i = 1; i <=n; i++) {
-      // printing spaces
-      for (let j = 1; j <= n - i; j++) {
+    for (let i = 1; i <= inputTwo; i++) {
+      for (let j = 1; j <= inputTwo - i; j++) {
         string += " ";
       }
-      // printing star
       for (let k = 0; k < 2 * i - 1; k++) {
         string += inputThree;
       }
